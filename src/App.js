@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+
+// import './App.css';
+
+import { Route, Routes } from "react-router-dom";
+import Addpro from "./components/Addpro";
+import Admin from "./components/Admin";
+import Datatable from "./components/Datatable";
+import Form from "./components/form";
+import General from "./components/general";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import View_products from "./components/View_products";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+ <Routes>
+  <Route path="/" element={<Admin/>}/>
+  <Route path="/Login" element={<Login/>}/>
+  <Route path="/Register" element={<Register/>}/>
+  <Route path="/General" element={<General/>}/>
+  <Route path="/Datatable" element={<Datatable/>}/>
+  {/* <Route path="/Product" element={<Product/>}/> */}
+  <Route path="/Form" element={<Form/>}/>
+  <Route path="/Home" element={<Home/>}/>
+  <Route path="/View_products" element={<View_products/>}/>
+  <Route path="/Addpro" element={<Addpro/>}/>
+
+ </Routes>
+  
+     </>
   );
 }
 
